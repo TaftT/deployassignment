@@ -119,7 +119,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
         users = self.RetrieveAllusers()
         for user in users:
             if user["email"] == email:
-                if self.verifyPass(password,user["hashPass"]):
+                if self.verifyPass(password,user["hashpass"]):
                     self.session["userId"] = user['id']
                     self.handle201({"msg":"login success"})
                     return
