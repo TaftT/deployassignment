@@ -364,6 +364,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
         if "userId" not in self.session:
             self.handle401({"error":"Please Log in or sign up."})
             return
+        print("this is the body", body)
         if body != None and body != []:
             myPayPds = payPdsDB()
             try:
