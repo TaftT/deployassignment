@@ -104,7 +104,7 @@ class usersDB:
         self.connection.close()
 
     def createUserTable(self):
-        self.cursor.execute("CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, fname(255), lname VARCHAR(255), email VARCHAR(255), hashpass VARCHAR(255))")
+        self.cursor.execute("CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, fname VARCHAR(255), lname VARCHAR(255), email VARCHAR(255), hashpass VARCHAR(255))")
         self.connection.commit()
 
     def insertUser(self, fname , lname, email, hashpass):
