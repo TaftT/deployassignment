@@ -31,7 +31,7 @@ class payPdsDB:
         self.connection.close()
 
     def createPaypdTable(self):
-        self.cursor.execute("CREATE TABLE IF NOT EXISTS payPd (id SERIAL PRIMARY KEY, date VARCHAR(255), totalSavings INTEGER, difference INTEGER, differenceGoal INTEGER, accounts VARCHAR(255))")
+        self.cursor.execute("CREATE TABLE IF NOT EXISTS payPds (id SERIAL PRIMARY KEY, date VARCHAR(255), totalSavings INTEGER, difference INTEGER, differenceGoal INTEGER, accounts VARCHAR(255))")
         self.connection.commit()
 
     def insert(self, date ,totalSavings ,difference,differenceGoal, accounts):
