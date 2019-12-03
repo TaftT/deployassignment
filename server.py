@@ -278,7 +278,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
 
         totalSavings  = self.getTotal(copypayPd["account"])
         diff  = self.getDiff(myPayPds.getLastPayPd()["id"],totalSavings)
-        diffGoal  = copypayPd['diffGoal']
+        diffGoal  = copypayPd['diffgoal']
         accounts  = copypayPd['account']
 
         myPayPds.insert(date,totalSavings,diff,diffGoal,accounts)
