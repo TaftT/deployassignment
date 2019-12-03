@@ -47,7 +47,6 @@ class payPdsDB:
     def countAllPayPds(self):
         self.cursor.execute("SELECT COUNT(*) FROM payPds")
         result = self.cursor.fetchone()
-        print(result)
         resp = result["count"]
         return resp
 
