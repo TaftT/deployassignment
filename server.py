@@ -410,7 +410,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             prevPayPd = 0
         else:
             prevPayPdobj = myPayPds.getPayPd(otherId)
-            prevPayPd = prevPayPdobj["totalSavings"]
+            prevPayPd = prevPayPdobj["totalsavings"]
         return thistotalSavings - prevPayPd
 
 
