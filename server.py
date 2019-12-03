@@ -390,7 +390,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
     def findPrevId(self, id):
         myPayPds = payPdsDB()
         ids = myPayPds.getListofIDs()
-        print("this is the id list", ids)
+        print("this is the id ", id)
         print("this is the id list", ids[0])
         if len(ids)>1:
             for i in range(len(ids)):
